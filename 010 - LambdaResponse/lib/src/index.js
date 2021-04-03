@@ -43,16 +43,6 @@ var Response = /** @class */ (function () {
                 return this;
             };
             //
-            // Cookies
-            class_1.prototype.withCookies = function () {
-                var cookies = [];
-                for (var _i = 0; _i < arguments.length; _i++) {
-                    cookies[_i] = arguments[_i];
-                }
-                this.response.cookies = cookies;
-                return this;
-            };
-            //
             class_1.prototype.build = function () {
                 return this.response;
             };

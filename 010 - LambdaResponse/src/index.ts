@@ -3,7 +3,6 @@ export class Response {
 	private statusCode: number | undefined;
 	private body: string | undefined;
 	private headers: Object | undefined;
-	private cookies: string[] | undefined;
 
 	constructor() {}
 
@@ -44,12 +43,6 @@ export class Response {
 			// Headers
 			withHeaders(h: Object) {
 				this.response.headers = h;
-				return this;
-			}
-			//
-			// Cookies
-			withCookies(...cookies: string[]) {
-				this.response.cookies = cookies;
 				return this;
 			}
 			//

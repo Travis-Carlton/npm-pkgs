@@ -3,7 +3,6 @@ export declare class Response {
     private statusCode;
     private body;
     private headers;
-    private cookies;
     constructor();
     static builder: () => {
         response: Response;
@@ -14,7 +13,6 @@ export declare class Response {
         serverError(): any;
         withBody(b: string | Object): any;
         withHeaders(h: Object): any;
-        withCookies(...cookies: string[]): any;
         build(): Response;
     };
 }

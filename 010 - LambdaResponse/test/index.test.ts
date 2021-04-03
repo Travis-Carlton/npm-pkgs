@@ -58,20 +58,11 @@ test('Should be able to build Response with Base 64 Encoding', () => {
 	expect(r).toEqual({ isBase64Encoded: true });
 });
 
-test('Should be able to build Response with Cookies', () => {
-	const r = Response.builder()
-		.withCookies('Cookie1', 'Cookie2')
-		.build();
-
-	expect(r).toEqual({ cookies: ['Cookie1', 'Cookie2'] });
-});
-
 test('Should be able to build Response with all Fields', () => {
 	const r = Response.builder()
 		.withStatusCode(200)
 		.withBody('Hello World')
 		.withHeaders({ 'Content-Type': 'application/json' })
-		.withCookies('Cookie', 'Another Cookie')
 		.withBase64Encoding()
 		.build();
 
@@ -79,7 +70,6 @@ test('Should be able to build Response with all Fields', () => {
 		statusCode: 200,
 		body: 'Hello World',
 		headers: { 'Content-Type': 'application/json' },
-		cookies: ['Cookie', 'Another Cookie'],
 		isBase64Encoded: true,
 	});
 });

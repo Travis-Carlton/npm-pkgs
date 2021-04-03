@@ -17,6 +17,14 @@ const { Response, DEFAULT_HEADERS } = require('@travic/lambda-response');
 
 // example use
 
+// This is how the DEFAULT_HEADERS is exported.
+const DEFAULT_HEADERS = {
+	'Access-Control-Allow-Headers': process.env.CORS_ALLOW_HEADERS,
+	'Access-Control-Allow-Origin': process.env.ALLOW_ORIGIN,
+	'Access-Control-Allow-Methods': process.env.CORS_ALLOW_METHODS,
+};
+//
+
 test('Should be able to build Response with Status Code', () => {
 	const r = Response.builder()
 		.withStatusCode(200)
@@ -75,20 +83,11 @@ test('Should be able to build Response with Base 64 Encoding', () => {
 	expect(r).toEqual({ isBase64Encoded: true });
 });
 
-test('Should be able to build Response with Cookies', () => {
-	const r = Response.builder()
-		.withCookies('Cookie1', 'Cookie2')
-		.build();
-
-	expect(r).toEqual({ cookies: ['Cookie1', 'Cookie2'] });
-});
-
 test('Should be able to build Response with all Fields', () => {
 	const r = Response.builder()
 		.withStatusCode(200)
 		.withBody('Hello World')
 		.withHeaders({ 'Content-Type': 'application/json' })
-		.withCookies('Cookie', 'Another Cookie')
 		.withBase64Encoding()
 		.build();
 
@@ -96,7 +95,6 @@ test('Should be able to build Response with all Fields', () => {
 		statusCode: 200,
 		body: 'Hello World',
 		headers: { 'Content-Type': 'application/json' },
-		cookies: ['Cookie', 'Another Cookie'],
 		isBase64Encoded: true,
 	});
 });
