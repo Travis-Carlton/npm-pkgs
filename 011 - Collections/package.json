@@ -1,0 +1,33 @@
+{
+	"name": "@travic/collections",
+	"version": "1.0.0",
+	"description": "Collections lib",
+	"main": "lib/src",
+	"types": "lib/src",
+	"scripts": {
+		"build": "tsc -p .",
+		"test": "jest",
+		"pub-pat": "npm version patch && npm publish --access public",
+		"pub-min": "npm version minor && npm publish --access public",
+		"pub-maj": "npm version major && npm publish --access public"
+	},
+	"keywords": [
+		"collections",
+		"arraylist"
+	],
+	"author": "@travic",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.12.17",
+		"@babel/preset-env": "^7.12.17",
+		"@babel/preset-typescript": "^7.12.17",
+		"@types/jest": "^26.0.22",
+		"@types/node": "^14.14.30",
+		"babel-jest": "^26.6.3",
+		"jest": "^26.6.3",
+		"typescript": "^3.9.5"
+	},
+	"files": [
+		"lib/src/"
+	]
+}

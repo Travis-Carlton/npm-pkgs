@@ -1,0 +1,22 @@
+{
+	"name": "@travic/get",
+	"version": "1.0.3",
+	"description": "",
+	"main": "lib/index.js",
+	"types": "lib",
+	"scripts": {
+		"build": "tsc -p .",
+		"pub-pat": "npm version patch && npm publish --access public",
+		"pub-min": "npm version minor && npm publish --access public",
+		"pub-maj": "npm version major && npm publish --access public"
+	},
+	"keywords": [
+		"get",
+		"get value of property"
+	],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"typescript": "^3.9.5"
+	}
+}
