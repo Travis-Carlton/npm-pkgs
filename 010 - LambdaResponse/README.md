@@ -11,9 +11,9 @@ yarn add @travic/lambda-response
 -   To use, `import` or `require` package;
 
 ```
-import { Response } from '@travic/lambda-response';
+import { Response, DEFAULT_HEADERS } from '@travic/lambda-response';
 // or
-const { Response } = require('@travic/lambda-response');
+const { Response, DEFAULT_HEADERS } = require('@travic/lambda-response');
 
 // example use
 

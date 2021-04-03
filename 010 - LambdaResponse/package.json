@@ -1,6 +1,6 @@
 {
 	"name": "@travic/lambda-response",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "Simple AWS Lambda Response Builder",
 	"main": "lib/src",
 	"types": "lib/src",

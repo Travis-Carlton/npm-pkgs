@@ -59,6 +59,15 @@ export class Response {
 		})();
 }
 
+/**
+ * @var DEFAULT_HEADERS
+ * @example
+ * {
+ * 'Access-Control-Allow-Headers': process.env.CORS_ALLOW_HEADERS,
+ * 'Access-Control-Allow-Origin': process.env.ALLOW_ORIGIN,
+ * 'Access-Control-Allow-Methods': process.env.CORS_ALLOW_METHODS
+ * }
+ */
 export const DEFAULT_HEADERS = {
 	'Access-Control-Allow-Headers': process.env.CORS_ALLOW_HEADERS,
 	'Access-Control-Allow-Origin': process.env.ALLOW_ORIGIN,
