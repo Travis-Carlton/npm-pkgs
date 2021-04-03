@@ -1,12 +1,12 @@
 {
 	"name": "@travic/lambda-response",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "Simple AWS Lambda Response Builder",
 	"main": "lib/src",
 	"types": "lib/src",
 	"scripts": {
 		"build": "tsc -p .",
-		"test": "jest",
+		"test": "CORS_ALLOW_HEADERS=\"Content-Type\" ALLOW_ORIGIN=\"*\" CORS_ALLOW_METHODS=\"GET\" jest",
 		"pub-pat": "npm version patch && npm publish --access public",
 		"pub-min": "npm version minor && npm publish --access public",
 		"pub-maj": "npm version major && npm publish --access public"

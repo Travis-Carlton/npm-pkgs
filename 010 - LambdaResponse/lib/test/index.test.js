@@ -29,11 +29,21 @@ test('Should be able to build Response with Body', function () {
     expect(r).toEqual({ body: 'Hello World' });
     expect(r2).toEqual({ body: '{"key":"value","key2":"value2"}' });
 });
-test('Should be able to build Response with Headers', function () {
+test('Should be able to build Response with Headers and default Headers', function () {
     var r = src_1.Response.builder()
         .withHeaders({ 'Content-Type': 'application/json' })
         .build();
+    var r2 = src_1.Response.builder()
+        .withHeaders(src_1.DEFAULT_HEADERS)
+        .build();
     expect(r).toEqual({ headers: { 'Content-Type': 'application/json' } });
+    expect(r2).toEqual({
+        headers: {
+            'Access-Control-Allow-Headers': 'Content-Type',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET',
+        },
+    });
 });
 test('Should be able to build Response with Base 64 Encoding', function () {
     var r = src_1.Response.builder()

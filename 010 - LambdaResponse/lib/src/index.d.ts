@@ -18,4 +18,9 @@ export declare class Response {
         build(): Response;
     };
 }
+export declare const DEFAULT_HEADERS: {
+    'Access-Control-Allow-Headers': string | undefined;
+    'Access-Control-Allow-Origin': string | undefined;
+    'Access-Control-Allow-Methods': string | undefined;
+};
 //# sourceMappingURL=index.d.ts.map

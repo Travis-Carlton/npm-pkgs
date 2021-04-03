@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Response = void 0;
+exports.DEFAULT_HEADERS = exports.Response = void 0;
 var Response = /** @class */ (function () {
     function Response() {
     }
@@ -62,4 +62,9 @@ var Response = /** @class */ (function () {
     return Response;
 }());
 exports.Response = Response;
+exports.DEFAULT_HEADERS = {
+    'Access-Control-Allow-Headers': process.env.CORS_ALLOW_HEADERS,
+    'Access-Control-Allow-Origin': process.env.ALLOW_ORIGIN,
+    'Access-Control-Allow-Methods': process.env.CORS_ALLOW_METHODS,
+};
 //# sourceMappingURL=index.js.map
